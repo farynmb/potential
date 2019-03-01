@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+
+  <meta charset="utf-8" />
+<link rel="/styles.css">;
+  <title>Learning Vue</title>
+
+</head>
+
+
+
+<body>
+        <div id="root">
+                <h1>Tasks</h1>
+                <ul>
+                  <li v-for="task in tasks" v-text="task.description"></li>
+                </ul>
+                <h1>Incomplete Tasks</h1>
+<ul>
+  <li v-for="task in incompleteTasks" v-text="task.description"></li>
+</ul>
+            </div>
+         
+<!---<div id="root">
+  
+                <!-- data binding using the v-model directive 
+                <input type="text" v-model="message">
+                <!-- template using mustache syntax 
+                <p>The value of the input is: {{ message }}.</p>
+       
+
+  </div>
+-->
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+
+  <script text="type/javascript" src="/script.js"></script>
+
+</body>
+
+
+
+</html>
