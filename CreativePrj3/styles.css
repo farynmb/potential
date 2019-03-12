@@ -1,0 +1,209 @@
+body {
+
+    font-family: 'Arvo';
+
+    font-size: 16px;
+    
+
+    padding: 40px 60px 0px 60px;
+
+    background: #000000;
+
+}
+
+.center{
+    text-align: center;
+    
+}
+
+/* List */
+
+h2{
+     color:rgb(145, 119, 112); 
+text-align: center;
+font-family: sans-serif;
+font-size: 50px;
+padding-bottom: 50px;
+padding-top: 50px;
+}
+
+ul {
+
+    list-style: none;
+
+}
+
+
+
+li {
+
+    background: rgb(196, 192, 192);
+
+    width: 200px;
+
+    min-height: 30px;
+
+    padding: 10px;
+
+    margin-bottom: 10px;
+
+    font-size: 1em;
+
+    display: flex;
+
+    align-items: center;
+
+}
+
+
+
+.delete {
+
+    display: none;
+
+    margin-left: auto;
+
+}
+
+
+
+li:hover .delete {
+
+    display: block;
+
+}
+
+
+
+label {
+
+    width: 400px;
+
+}
+
+
+
+.completed {
+
+    text-decoration: line-through;
+
+}
+.dh2{
+    text-align: center;
+    font-size: 50px;
+    font-family: sans-serif;
+    padding-bottom: 10px;
+    color:rgb(145, 119, 112); 
+}
+p{
+   float: right;
+   color:rgb(145, 119, 112); 
+    font-size: 35px;
+    font-family: sans-serif;
+}
+.dh3{
+    text-align: center;
+    font-size: 50px;
+    padding-bottom: 10px;
+    font-family: sans-serif;
+    color: rgb(143, 6, 6); /*if there is a way to change color with every house do that if not probable change color to navy or something like that*/
+}
+.dh4{
+    text-align: center;
+    font-size: 50px;
+    padding-bottom: 10px;
+    font-family: sans-serif;
+    color: rgb(8, 94, 8); /*if there is a way to change color with every house do that if not probable change color to navy or something like that*/
+}
+.dh5{
+    text-align: center;
+    font-size: 50px;
+    font-family: sans-serif;
+    padding-bottom: 10px;
+    color: goldenrod; /*if there is a way to change color with every house do that if not probable change color to navy or something like that*/
+}
+.dh6{
+    text-align: center;
+    font-size: 50px;
+    font-family: sans-serif;
+    padding-bottom: 10px;
+    color: rgb(5, 5, 141); /*if there is a way to change color with every house do that if not probable change color to navy or something like that*/
+}
+
+/* Form */
+
+form{
+    text-align: center !important;
+}
+h1{
+    float: left;
+    font-size: 40;
+    color:rgb(145, 119, 112); 
+    font-family: sans-serif;
+}
+
+input[type=checkbox] {
+
+    transform: scale(1.5);
+
+    margin-right: 10px;
+
+}
+
+
+
+
+
+input[type=text] {
+
+    font-size: 1em;
+
+}
+
+
+
+button {
+
+    font-family: 'Arvo';
+
+    font-size: 1em;
+
+}
+
+.row:after{
+content: "";
+display: table;
+clear: both;
+}
+
+
+/* Controls */
+
+.right{
+float: left;
+width: 50%;
+text-align: center;
+}
+.left{
+    float: left;
+    width: 50%;
+}
+
+.space{
+padding-bottom: 100px;
+}
+.controls {
+
+    margin-top: 20px;
+
+}
+footer{
+    clear: both;
+  
+    padding: 1em;
+    text-align: center;  
+  }
+  a{
+    color:rgb(145, 119, 112); 
+    text-decoration: none !important;
+  }

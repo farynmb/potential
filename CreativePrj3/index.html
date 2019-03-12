@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+
+  <meta charset="utf-8" />
+
+  <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet">
+
+  <link rel="stylesheet" href="/styles.css" />
+
+  <title>Vue Todo</title>
+
+</head>
+
+
+
+
+
+<body>
+
+        <div id="app">
+            <h2>Becoming A Wizard</h2>
+          <div class="center">
+            <div v-if = "sort === 0">
+                        
+                <div class="dh2"> House... </div>
+             
+         </div>
+                    <div v-if = "sort === 1">
+                        
+                           <div class="dh3"> Gryffindor! </div>
+                        
+                    </div>
+                    <div v-if = "sort === 2">
+                            
+                                <div class="dh4"> Slytherin! </div>
+                            
+                        </div>
+                        <div v-if = "sort === 3">
+                                
+                                    <div class="dh5"> HufflePuff! </div>
+                                
+                            </div>
+                            <div v-if = "sort === 4">
+                                    
+                                        <div class="dh6"> Ravenclaw! </div>
+                                       
+                                      </div>
+          </div>
+      <div class="center space">
+                                      <button v-on:click="random" center>Sorting Hat</button>
+                                </div>
+                                <div class="row">
+                                    <div class="left">
+                                        <h1>Becoming a Wizard <br> Checklist</h1>
+                                        <p v-show="activeTodos.length === 0">You have completed your training! <br> You are now Full Fledged Wizard/Witch!</p>
+                                    
+                                                    <ul>
+                                                        
+                                                      <li v-for="task in todos">
+                                                          
+                                              <input type="checkbox" v-model="task.completed"  />
+                                              <label v-bind:class="{ completed: task.completed }">{{ task.text }}</label>
+                                            
+                                                      </li>
+                                                    </ul>
+                                                   
+                                        <ul>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                <div class="right">
+                                
+                                <div v-if="wizard === 1">
+                                  
+                                  <p>Due to recent Death Eater attacks, Ollivander's is under some major construction. You will have to forge your own wand. <br>
+                                    Whittle Your first wand before joining the others at Hogwarts.</p>
+                                  
+                                  </div>     
+                                
+                             
+                              <div v-if="wizard === 2">
+                                
+                                <p>Practice and master these three spells: <br>
+                                  Wingardium Leviosa <br>
+                                  Accio<br>
+                                  Petrificus Totalus<br>
+                                
+                                </p></div>  
+                                  
+                 <div v-if="wizard === 3">
+                   
+                  <p>Potion class decided to learn how to make love potions. Your greatest enemy took the last of the material resources. <br> Use natural ingredients, soaps and other resources to replicate a runny pink potion that smells good so you don't fail the final.</p>
+                   
+           </div> 
+                                <div v-if="wizard === 4">
+                                  
+                                  <p>Find the nearest broom and least publicated park. Reteach your broom how to fly by running through the field with it and shouting "UP!" Eventually it should take off with the wind. You will be a natural in no time so don't forget to try out for the quidich team</p></div>    
+                               
+                           
+                        <button v-on:click="previous" :disabled = "wizard === 1">Previous</button>
+                        
+                        <button v-on:click="next" :disabled = "wizard === max">Next</button>  
+                     
+                      </div>
+             
+               
+ 
+</div>
+</div>
+</div>
+</div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+  <script src="/script.js"></script>
+  <footer class="app-footer">
+      <a href="https://github.com/farynmb/potential/cp3">My github</a>
+    </footer>
+  
+</body>
+</html>
