@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <title>Your World</title>
+</head>
+
+<body>
+  <div class="header">
+    <div class="title">
+      <h1>Imaginary World</h1>
+      <p>"The problem isn't growing up, it's forgetting."
+          <br> <i>-The Little Prince</i></p>
+    </div>
+  </div>
+  <div id="app" class="content">
+          
+    <div class="row">
+
+          <section class="image-gallery col">
+            <div class="image" v-for="item in items">
+              <h2>{{item.title}}</h2> 
+              
+              <img :src="item.path" />
+              {{item.itemDescription}}
+            </div>
+              </section>
+
+              <section class="Entry col">
+<div class="Entrys" v-for="entry in Entrys">
+<p>{{entry.entry}}</p>
+</div>
+              </section>
+              <section class="image-gallery col">
+                <div class="image" v-for="item in maps">
+                  <h2>{{item.Place_name}}</h2>
+                  <img :src="item.map_path" />
+                </div>
+
+              </section>
+              </div>
+  </div>
+  <div class="footer">
+    <a href="/admin.html">Create Your World</a>
+  </div>
+  <footer class="app-footer fixed-bottom">
+    <a href="https://github.com/farynmb/potential/cp4">My Github</a>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.7/vue.js" integrity="sha256-g+Q8DFAmG5+eyRPSydX0LY4TfjsL11XSDrIGerbbEdA=" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script><script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="/script.js"></script>
+</body>
+
+</html>

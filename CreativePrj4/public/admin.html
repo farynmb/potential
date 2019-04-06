@@ -1,0 +1,112 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <title>Your World</title>
+</head>
+
+<body>
+  <div class="center">
+  <div id="admin" class="content">
+    <h1>Your World</h1>
+    <div class="heading">
+    
+   <h2>People of Your World</h2>
+  </div>
+    <div class="add row">
+      <div class="form col align-self-center">
+        <input v-model="title" placeholder="Name of Person">
+        <br>
+        <textarea v-model="itemDescription" placeholder="Background Information" rows="4" cols="50"></textarea>
+        <p></p>
+        <input type="file" name="photo" @change="fileChanged">
+        <button @click="upload">Upload</button>
+      </div>
+      <div class="upload" v-if="addItem">
+        <h2>{{addItem.title}}</h2>
+        <img :src="addItem.path" />
+      </div>
+    </div>
+
+    
+ 
+    
+    
+        <div class="heading">
+            
+        <h2>Stories and History of Your World</h2>
+      </div>
+        
+<div class="Entry">
+    <div class="form">
+        <input v-model="entry" placeholder="Entry">
+        <br>
+        <button @click="uploadEntry">Upload</button>
+      </div>
+      <div class="upload" v-if="addEntry">
+        <h2>{{addEntry.entry}}</h2>
+      </div>
+</div>
+<div class="heading">
+        
+    <h2>Geopgraphy of Your World</h2>
+    </div>
+<div class="geography">
+    <div class="form">
+        <input v-model="Place_name" placeholder="Place Name">
+        <br>
+        <input type="file" name="photo" @change="MapfileChanged">
+        <button @click="uploadMap">Upload</button>
+      </div>
+      <div class="upload" v-if="addMap">
+        <h2>{{addMap.Name_place}}</h2>
+        <img :src="addMap.map_path" />
+      </div>
+    </div>
+   
+
+    <div class="heading">
+      <h2>Edit/Delete an Entry</h2>
+    </div>
+      <div class="edit">
+        <div class="form">
+          <input v-model="findTitle" placeholder="Search">
+           <div class="suggestions" v-if="suggestions.length > 0">
+            <div class="suggestion" v-for="s in suggestions" @click="selectItem(s)">{{s.title}}
+            
+            </div>
+          </div>
+        </div>
+        <div class="upload" v-if="findItem">
+          <input v-model="findItem.title">
+          <p></p>
+          <img :src="findItem.path" />
+        </div>
+        <div class="actions" v-if="findItem">
+          <button @click="deleteItem(findItem)">Delete</button>
+          <button @click="editItem(findItem)">Edit</button>
+          <textarea v-model="findItem.itemDescription" rows="10" cols="10" style="text-align: center"></textarea> 
+         
+        </div>
+      </div>
+  </div>
+</div>
+
+  <footer class="app-footer">
+    <a href="https://github.com/farynmb/potential/lab4">My Github</a>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js" integrity="sha256-mpnrJ5DpEZZkwkE1ZgkEQQJW/46CSEh/STrZKOB/qoM=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.7/vue.js" integrity="sha256-g+Q8DFAmG5+eyRPSydX0LY4TfjsL11XSDrIGerbbEdA=" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script><script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script><script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+ 
+  <script src="/admin.js"></script>
+</body>
+
+</html>
