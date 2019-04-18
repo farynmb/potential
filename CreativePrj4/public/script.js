@@ -41,3 +41,7 @@ var app = new Vue({
   },
 }
 });
+
+//footer and where it needs to go
+//showing up of the photos on your personal page
+//comments not showing up
